@@ -43,6 +43,7 @@ export default async function SnippetShowPage(props: snippetsShowPageProps) {
   );
 }
 
+// this function will be called at build time and is used to cache the data in production
 export async function generateStaticParams() {
   const snippets = await db.snippet.findMany();
 
